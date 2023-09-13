@@ -1,3 +1,5 @@
-function print{
-    console.log(`Hello`);
+function print() {
+  console.log(`Hello`);
 }
+
+print();
