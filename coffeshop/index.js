@@ -43,7 +43,7 @@ async function runShop() {
     points += 1;
     console.log("added one point");
   }
-  myFatoora(cookies, coffees, cookiesCost, cofeecost, totalcost, name);
+  myFatoora(cookies, coffees, cookiesCost, cofeecost, totalcost);
 }
 //This is Last line
 runShop();
@@ -68,6 +68,6 @@ function myFatoora(cookieNum, coffeeNum, cookieCost, coffeeCost, total, name) {
   ${coffeeNum}    X Coffee                   1.250          ${coffeeCost}
   ===============================================================
   Discount                                                    50%
-  Total                                                  ${total}
+  Total                                                  ${Total}
   `);
 }
