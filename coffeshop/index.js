@@ -20,8 +20,8 @@ async function videogamescdshop() {
   console.log(games);
 }
 async function runShop() {
-  const cookies = await takeInput("How Many Cookies?");
-  const coffees = await takeInput("How many coffee you want?");
+  const cookies = await takeInput("How Many Cookies? ");
+  const coffees = await takeInput("How many coffee you want? ");
   console.log(`You ordered ${cookies} Cookies`);
   console.log(`You ordered ${coffees} Coffees`);
   let cookiesCost = cookies * 0.25;
@@ -29,11 +29,11 @@ async function runShop() {
   let totalcost = cookiesCost + cofeecost;
   console.log(`You should pay ${totalcost}`);
 
-  const name = await takeInput("whats your name?");
+  const name = await takeInput("whats your name? ");
   console.log(name);
 
-  const coupon = await takeInput("enter coupon number");
-  if (coupon == "Coded 2023") {
+  const coupon = await takeInput("enter coupon number? ");
+  if (coupon == "Coded 2023" || coupon == "coded 2023") {
     //Fatma
     totalcost = totalcost * 0.5;
     console.log(`After Discount you pay ${totalcost}`);
@@ -45,10 +45,11 @@ async function runShop() {
   }
 
   myFatoora(cookies, coffees, cookiesCost, cofeecost, totalcost, name);
-  if (totalcost >= 10) {
-    let nextCoupon = name + Math.random(1, 100);
+  if (totalcost >= 3) {
+    let intRandom = Math.floor(Math.random() * 100) + 1;
+    let nextCoupon = `${name}${intRandom}`;
     console.log(
-      `Congratulation you get a promotion coupon ${nextCoupon} for your next order`
+      `Congratulation! you get a promotion coupon "${nextCoupon}" you can use it for your next order`
     );
   }
 }
@@ -68,13 +69,14 @@ function myFatoora(cookieNum, coffeeNum, cookieCost, coffeeCost, total, name) {
   Welcome to QueB
   Date: Sept 14,2023
   Name:FullStack Students - Class A ${name}
-  ===============================================================
-  Unit          Description           Unit Price    Cut-Price
-  ---------------------------------------------------------------
-  ${cookieNum}    X Cookies                  0.250          ${cookieCost}
-  ${coffeeNum}    X Coffee                   1.250          ${coffeeCost}
-  ===============================================================
-  Discount                                                    50%
-  Total                                                  ${total}
+  ===================================================
+  Unit        Description    Unit Price    Cut-Price
+  ---------------------------------------------------
+  ${cookieNum}          X Cookies      0.250         ${cookieCost}
+  ${coffeeNum}          X Coffee       1.250         ${coffeeCost}
+  ===================================================
+  Total Before Discount:                   ${cookieCost + coffeeCost}
+  Discount:                                50%
+  Total:                                   ${total}
   `);
 }
