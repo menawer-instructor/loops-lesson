@@ -30,7 +30,8 @@ async function runShop() {
   const coupon = await takeInput("enter coupon number");
   if (coupon == "Coded 2023") {
     //Fatma
-  }
+    totalcost= totalcost*0.5
+  } 
 }
 
 //This is Last line
