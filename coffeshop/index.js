@@ -24,11 +24,13 @@ async function runShop() {
   console.log(`You ordered ${coffees} Coffees`);
   let cookiesCost = cookies * 0.25;
   let cofeecost = coffees * 1.25;
-  const cuppon = await takeInput("enter cuppon number");
-
   let totalcost = cookiesCost + cofeecost;
   console.log(`You should pay ${totalcost}`);
-  if ( coupon = "Codded 2023"){console.log()};
+
+  const coupon = await takeInput("enter coupon number");
+  if (coupon == "Coded 2023") {
+    //Fatma
+  }
 }
 
 //This is Last line
