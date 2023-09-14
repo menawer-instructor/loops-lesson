@@ -22,6 +22,5 @@ async function runShop() {
   let cofeecost = coffees * 1.25;
 }
 
-console.log(cookiesCost);
 //This is Last line
 runShop();
