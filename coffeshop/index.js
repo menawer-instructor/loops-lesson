@@ -15,10 +15,9 @@ async function takeInput(question) {
 //This Runs the shop
 async function videogamescdshop() {
   let games = await takeInput("How Many videogamescd?");
-  let videogamescd = games * 21.0
+  let videogamescd = games * 21.0;
   console.log(`you order ${videogamescd} games!`);
-   console.log(games);
-
+  console.log(games);
 }
 async function runShop() {
   const cookies = await takeInput("How Many Cookies?");
@@ -43,6 +42,13 @@ async function runShop() {
   if (cookies >= 1 && coffees >= 1) {
     points += 1;
     console.log("added one point");
+  }
+  //Ghizlane
+  if (totalcost >= 10) {
+    let nextCoupon = name + Math.random(1, 100);
+    console.log(
+      `Congratulation you get a promotion coupon ${nextCoupon} for your next order`
+    );
   }
   myFatoora(cookies, coffees, cookiesCost, cofeecost, totalcost);
 }
@@ -69,6 +75,6 @@ function myFatoora(cookieNum, coffeeNum, cookieCost, coffeeCost, total) {
   ${coffeeNum} X Cookies              1.250         ${coffeeCost}
   ===============================================================
   Discount                                                    50%
-  Total                                                  ${total}
+  Total                                                  ${Total}
   `);
 }
