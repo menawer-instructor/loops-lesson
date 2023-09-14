@@ -23,3 +23,12 @@ async function runShop() {
 console.log(cookiesCost);
 //This is Last line
 runShop();
+
+
+async function coffee()
+{
+  const ans = await takeInput("How many coffee you want?")
+  console.log(`You ordered ${ans} coffee`)
+}
+
+coffee();
