@@ -15,10 +15,9 @@ async function takeInput(question) {
 //This Runs the shop
 async function videogamescdshop() {
   let games = await takeInput("How Many videogamescd?");
-  let videogamescd = games * 21.0
+  let videogamescd = games * 21.0;
   console.log(`you order ${videogamescd} games!`);
-   console.log(games);
-
+  console.log(games);
 }
 async function runShop() {
   const cookies = await takeInput("How Many Cookies?");
@@ -44,7 +43,7 @@ async function runShop() {
     points += 1;
     console.log("added one point");
   }
-  myFatoora(cookies, coffees, cookiesCost, cofeecost, totalcost);
+  myFatoora(cookies, coffees, cookiesCost, cofeecost, totalcost, name);
 }
 //This is Last line
 runShop();
@@ -57,16 +56,16 @@ runShop();
 
 // return cost ,cups;
 // }
-function myFatoora(cookieNum, coffeeNum, cookieCost, coffeeCost, total) {
+function myFatoora(cookieNum, coffeeNum, cookieCost, coffeeCost, total, name) {
   console.log(`
   Welcome to QueB
   Date: Sept 14,2023
-  Name:FullStack Students - Class A
+  Name:FullStack Students - Class A ${name}
   ===============================================================
   Unit          Description           Unit Price    Cut-Price
   ---------------------------------------------------------------
-  ${cookieNum} X Cookies              0.250         ${cookieCost}
-  ${coffeeNum} X Cookies              1.250         ${coffeeCost}
+  ${cookieNum}    X Cookies                  0.250          ${cookieCost}
+  ${coffeeNum}    X Coffee                   1.250          ${coffeeCost}
   ===============================================================
   Discount                                                    50%
   Total                                                  ${total}
