@@ -41,6 +41,7 @@ async function runShop() {
     points += 1;
     console.log("added one point");
   }
+  myFatoora(cookies, coffees, cookiesCost, cofeecost, totalcost);
 }
 //This is Last line
 runShop();
@@ -53,3 +54,18 @@ runShop();
 
 // return cost ,cups;
 // }
+function myFatoora(cookieNum, coffeeNum, cookieCost, coffeeCost, total) {
+  console.log(`
+  Welcome to QueB
+  Date: Sept 14,2023
+  Name:FullStack Students - Class A
+  ===============================================================
+  Unit          Description           Unit Price    Cut-Price
+  ---------------------------------------------------------------
+  ${cookieNum} X Cookies              0.250         ${cookieCost}
+  ${coffeeNum} X Cookies              1.250         ${coffeeCost}
+  ===============================================================
+  Discount                                                    50%
+  Total                                                  ${Total}
+  `);
+}
