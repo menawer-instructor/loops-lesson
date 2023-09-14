@@ -71,8 +71,8 @@ function myFatoora(cookieNum, coffeeNum, cookieCost, coffeeCost, total, name) {
   ===============================================================
   Unit        Description    Unit Price    Cut-Price
   ---------------------------------------------------------------
-  ${cookieNum}        X Cookies              0.250          ${cookieCost}
-  ${coffeeNum}        X Coffee               1.250          ${coffeeCost}
+  ${cookieNum}          X Cookies            0.250          ${cookieCost}
+  ${coffeeNum}          X Coffee             1.250          ${coffeeCost}
   ===============================================================
   Total Before Discount:                        ${cookieCost + coffeeCost}
   Discount:                                     50%
