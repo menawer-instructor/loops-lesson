@@ -68,6 +68,6 @@ function myFatoora(cookieNum, coffeeNum, cookieCost, coffeeCost, total, name) {
   ${coffeeNum}    X Coffee                   1.250          ${coffeeCost}
   ===============================================================
   Discount                                                    50%
-  Total                                                  ${Total}
+  Total                                                  ${total}
   `);
 }
