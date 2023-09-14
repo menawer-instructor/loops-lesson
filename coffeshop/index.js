@@ -17,7 +17,10 @@ async function takeInput(question) {
 async function runShop() {
   const cookies = await takeInput("How Many Cookies?");
   const coffees = await takeInput("How many coffee you want?");
+  console.log(`You ordered ${cookies} Cookies`);
+  let cookiesCost = cookies * 0.25;
 }
 
+console.log(cookiesCost);
 //This is Last line
 runShop();
