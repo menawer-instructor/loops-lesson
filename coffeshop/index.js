@@ -14,7 +14,12 @@ async function takeInput(question) {
 
 //This Runs the shop
 async function runShop() {
-  const answer = await takeInput("How Many Cookies?");
+  let cookies = await takeInput("How Many Cookies?");
+  console.log(`you order ${cookies} cookies!`);
+}
+async function videogamescd() {
+  let videogamescd = await takeInput("How Many videogamescd?");
+  console.log(`you order ${videogamescd} games!`);
 }
 
 //This is Last line
