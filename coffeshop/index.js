@@ -29,8 +29,23 @@ async function runShop() {
   let cofeecost = coffees * 1.25;
   let totalcost = cookiesCost + cofeecost;
   console.log(`You should pay ${totalcost}`);
-}
 
+  const name = await takeInput("whats your name?");
+  console.log(name);
+
+  const coupon = await takeInput("enter coupon number");
+  if (coupon == "Coded 2023") {
+    //Fatma
+    totalcost = totalcost * 0.5;
+    console.log(`After Discount you pay ${totalcost}`);
+  }
+  let points = 0;
+  if (cookies >= 1 && coffees >= 1) {
+    points += 1;
+    console.log("added one point");
+  }
+  myFatoora(cookies, coffees, cookiesCost, cofeecost, totalcost);
+}
 //This is Last line
 runShop();
 
@@ -42,3 +57,18 @@ runShop();
 
 // return cost ,cups;
 // }
+function myFatoora(cookieNum, coffeeNum, cookieCost, coffeeCost, total) {
+  console.log(`
+  Welcome to QueB
+  Date: Sept 14,2023
+  Name:FullStack Students - Class A
+  ===============================================================
+  Unit          Description           Unit Price    Cut-Price
+  ---------------------------------------------------------------
+  ${cookieNum} X Cookies              0.250         ${cookieCost}
+  ${coffeeNum} X Cookies              1.250         ${coffeeCost}
+  ===============================================================
+  Discount                                                    50%
+  Total                                                  ${Total}
+  `);
+}
