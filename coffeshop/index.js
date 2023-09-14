@@ -28,6 +28,7 @@ async function runShop() {
 
   let totalcost = cookiesCost + cofeecost;
   console.log(`You should pay ${totalcost}`);
+  if ( coupon = "Codded 2023"){console.log()};
 }
 
 //This is Last line
