@@ -31,8 +31,12 @@ async function runShop() {
   if (coupon == "Coded 2023") {
     //Fatma
   }
+  const points = 0;
+  if (cookies >= 1 && coffees >= 1) {
+    points += 1;
+    console.log("added one point");
+  }
 }
-
 //This is Last line
 runShop();
 
