@@ -27,9 +27,14 @@ async function runShop() {
   let totalcost = cookiesCost + cofeecost;
   console.log(`You should pay ${totalcost}`);
 
+  const name = await takeInput("whats your name?");
+  console.log(name);
+
   const coupon = await takeInput("enter coupon number");
   if (coupon == "Coded 2023") {
     //Fatma
+    totalcost = totalcost * 0.5;
+    console.log(`After Discount you pay ${totalcost}`);
   }
   const points = 0;
   if (cookies >= 1 && coffees >= 1) {
