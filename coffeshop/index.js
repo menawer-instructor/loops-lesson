@@ -43,7 +43,14 @@ async function runShop() {
     points += 1;
     console.log("added one point");
   }
+
   myFatoora(cookies, coffees, cookiesCost, cofeecost, totalcost, name);
+  if (totalcost >= 10) {
+    let nextCoupon = name + Math.random(1, 100);
+    console.log(
+      `Congratulation you get a promotion coupon ${nextCoupon} for your next order`
+    );
+  }
 }
 //This is Last line
 runShop();
