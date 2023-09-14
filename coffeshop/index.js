@@ -32,8 +32,8 @@ async function runShop() {
   const name = await takeInput("whats your name?");
   console.log(name);
 
-  const coupon = await takeInput("enter coupon number");
-  if (coupon == "Coded 2023") {
+  const coupon = await takeInput("enter coupon number? ");
+  if (coupon == "Coded 2023" || coupon == "coded 2023") {
     //Fatma
     totalcost = totalcost * 0.5;
     console.log(`After Discount you pay ${totalcost}`);
@@ -43,7 +43,14 @@ async function runShop() {
     points += 1;
     console.log("added one point");
   }
+
   myFatoora(cookies, coffees, cookiesCost, cofeecost, totalcost, name);
+  if (totalcost >= 10) {
+    let nextCoupon = name + Math.random(1, 100);
+    console.log(
+      `Congratulation you get a promotion coupon ${nextCoupon} for your next order`
+    );
+  }
 }
 //This is Last line
 runShop();
