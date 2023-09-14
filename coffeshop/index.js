@@ -20,6 +20,8 @@ async function runShop() {
   console.log(`You ordered ${cookies} Cookies`);
   let cookiesCost = cookies * 0.25;
   let cofeecost = coffees * 1.25;
+  let totalcost = cookiesCost + cofeecost;
+  console.log(`You should pay ${totalcost}`);
 }
 
 //This is Last line
