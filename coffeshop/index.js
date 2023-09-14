@@ -43,7 +43,7 @@ async function runShop() {
     points += 1;
     console.log("added one point");
   }
-  myFatoora(cookies, coffees, cookiesCost, cofeecost, totalcost);
+  myFatoora(cookies, coffees, cookiesCost, cofeecost, totalcost, name);
 }
 //This is Last line
 runShop();
