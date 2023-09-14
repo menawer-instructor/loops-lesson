@@ -49,7 +49,7 @@ async function runShop() {
     let intRandom = Math.floor(Math.random() * 100) + 1;
     let nextCoupon = `${name}${intRandom}`;
     console.log(
-      `Congratulation you get a promotion coupon "${nextCoupon}" you can use it for your next order`
+      `Congratulation! you get a promotion coupon "${nextCoupon}" you can use it for your next order`
     );
   }
 }
