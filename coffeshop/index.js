@@ -13,18 +13,11 @@ async function takeInput(question) {
 //Dont look at above code yet.
 
 //This Runs the shop
+
 async function runShop() {
-  const answer = await takeInput("How Many Cookies?");
+  const cookies = await takeInput("How Many Cookies?");
+  const coffees = await takeInput("How many coffee you want?");
 }
 
 //This is Last line
 runShop();
-
-
-async function coffee()
-{
-  const ans = await takeInput("How many coffee you want?")
-  console.log(`You ordered ${ans} coffee`)
-}
-
-coffee();
