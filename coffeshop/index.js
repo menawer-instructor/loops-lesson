@@ -46,7 +46,8 @@ async function runShop() {
 
   myFatoora(cookies, coffees, cookiesCost, cofeecost, totalcost, name);
   if (totalcost >= 3) {
-    let nextCoupon = `${name}" "${getRandomInt(1, 100)}`;
+    let intRandom = Math.floor(Math.random() * 100) + 1;
+    let nextCoupon = `${name}${intRandom}}`;
     console.log(
       `Congratulation you get a promotion coupon ${nextCoupon} for your next order`
     );
