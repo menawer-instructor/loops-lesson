@@ -32,8 +32,8 @@ async function runShop() {
   const name = await takeInput("whats your name?");
   console.log(name);
 
-  const coupon = await takeInput("enter coupon number");
-  if (coupon == "Coded 2023") {
+  const coupon = await takeInput("enter coupon number? ");
+  if (coupon == "Coded 2023" || coupon == "coded 2023") {
     //Fatma
     totalcost = totalcost * 0.5;
     console.log(`After Discount you pay ${totalcost}`);
