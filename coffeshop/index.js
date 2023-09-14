@@ -36,7 +36,7 @@ async function runShop() {
     totalcost = totalcost * 0.5;
     console.log(`After Discount you pay ${totalcost}`);
   }
-  const points = 0;
+  let points = 0;
   if (cookies >= 1 && coffees >= 1) {
     points += 1;
     console.log("added one point");
