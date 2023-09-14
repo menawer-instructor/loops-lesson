@@ -13,15 +13,21 @@ async function takeInput(question) {
 //Dont look at above code yet.
 
 //This Runs the shop
-
+async function videogamescd() {
+  let videogamescd = await takeInput("How Many videogamescd?");
+  console.log(`you order ${videogamescd} games!`);
+}
 async function runShop() {
   const cookies = await takeInput("How Many Cookies?");
   const coffees = await takeInput("How many coffee you want?");
   console.log(`You ordered ${cookies} Cookies`);
+  console.log(`You ordered ${coffees} Coffees`);
   let cookiesCost = cookies * 0.25;
   let cofeecost = coffees * 1.25;
-  const cuppon =await takeInput("enter cuppon number")
+  const cuppon = await takeInput("enter cuppon number");
 
+  let totalcost = cookiesCost + cofeecost;
+  console.log(`You should pay ${totalcost}`);
 }
 
 //This is Last line
