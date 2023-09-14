@@ -20,8 +20,8 @@ async function videogamescdshop() {
   console.log(games);
 }
 async function runShop() {
-  const cookies = await takeInput("How Many Cookies?");
-  const coffees = await takeInput("How many coffee you want?");
+  const cookies = await takeInput("How Many Cookies? ");
+  const coffees = await takeInput("How many coffee you want? ");
   console.log(`You ordered ${cookies} Cookies`);
   console.log(`You ordered ${coffees} Coffees`);
   let cookiesCost = cookies * 0.25;
@@ -49,7 +49,7 @@ async function runShop() {
     let intRandom = Math.floor(Math.random() * 100) + 1;
     let nextCoupon = `${name}${intRandom}`;
     console.log(
-      `Congratulation you get a promotion coupon "${nextCoupon}" for your next order`
+      `Congratulation you get a promotion coupon "${nextCoupon}" you can use it for your next order`
     );
   }
 }
