@@ -29,7 +29,7 @@ async function runShop() {
   let totalcost = cookiesCost + cofeecost;
   console.log(`You should pay ${totalcost}`);
 
-  const name = await takeInput("whats your name?");
+  const name = await takeInput("whats your name? ");
   console.log(name);
 
   const coupon = await takeInput("enter coupon number? ");
@@ -46,7 +46,7 @@ async function runShop() {
 
   myFatoora(cookies, coffees, cookiesCost, cofeecost, totalcost, name);
   if (totalcost >= 10) {
-    let nextCoupon = `name ${Math.random(1, 100)}`;
+    let nextCoupon = `${name} ${getRandomInt(1, 100)}`;
     console.log(
       `Congratulation you get a promotion coupon ${nextCoupon} for your next order`
     );
