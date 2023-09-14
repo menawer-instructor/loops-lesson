@@ -69,12 +69,12 @@ function myFatoora(cookieNum, coffeeNum, cookieCost, coffeeCost, total, name) {
   Welcome to QueB
   Date: Sept 14,2023
   Name:FullStack Students - Class A ${name}
-  ===============================================================
+  ===================================================
   Unit        Description    Unit Price    Cut-Price
-  ---------------------------------------------------------------
+  ---------------------------------------------------
   ${cookieNum}          X Cookies      0.250         ${cookieCost}
   ${coffeeNum}          X Coffee       1.250         ${coffeeCost}
-  ===============================================================
+  ===================================================
   Total Before Discount:                   ${cookieCost + coffeeCost}
   Discount:                                50%
   Total:                                   ${total}
