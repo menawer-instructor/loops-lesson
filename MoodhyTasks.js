@@ -223,22 +223,22 @@ let fruits = [];
 
     function youGottaCalmDown(shout) {
 
-       return shout.slice(0, shout.indexOf(`!`));
+       return shout.slice(0, shout.indexOf(`!`)+1);
     };
 
     console.log (youGottaCalmDown(`Hello!!!!!`));
     
-/* 
 
-other solutions 
 
-let shout = `Hello!!!!!`;
-let subShout = shout.slice(0, 6);
+// other solutions 
 
-let shout = `Hello!!!!!`;
-let subShout = shout.slice(0, shout.indexOf(`!`));
+// let shout = `Hello!!!!!`;
+// let subShout = shout.slice(0, 6);
 
-console.log({subShout}); */
+// let shout = `Hello!!!!!`;
+// let subShout = shout.slice(0, shout.indexOf(`!`)+1);
+
+// console.log({subShout}); 
 
 
 
