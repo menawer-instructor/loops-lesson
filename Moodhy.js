@@ -15,6 +15,3 @@ console.log(rests);
 
 // Task 1
 
-Let myArray = [];
-
-console.log(myArray);
