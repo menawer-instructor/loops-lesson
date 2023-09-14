@@ -19,3 +19,12 @@ async function runShop() {
 
 //This is Last line
 runShop();
+
+
+// latte cost
+async function Lattecost(cup){
+let cost=cup*1.5;
+  const cups=await takeInput("How many cups do u want")
+
+return cost ,cups;
+}
