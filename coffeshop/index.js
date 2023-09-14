@@ -13,9 +13,12 @@ async function takeInput(question) {
 //Dont look at above code yet.
 
 //This Runs the shop
-async function videogamescd() {
-  let videogamescd = await takeInput("How Many videogamescd?");
+async function videogamescdshop() {
+  let games = await takeInput("How Many videogamescd?");
+  let videogamescd = games * 21.0
   console.log(`you order ${videogamescd} games!`);
+   console.log(games);
+
 }
 async function runShop() {
   const cookies = await takeInput("How Many Cookies?");
