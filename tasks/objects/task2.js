@@ -1,59 +1,57 @@
-
 const students = [
-    {
-      "id": 1,
-      "name": "Alice",
-      "courses": ["Math", "Science", "History"]
-    },
-    {
-      "id": 2,
-      "name": "Bob",
-      "courses": ["History", "English", "Math", "Art"]
-    },
-    {
-      "id": 3,
-      "name": "Charlie",
-      "courses": ["Science", "English", "Music"]
-    },
-    {
-      "id": 4,
-      "name": "David",
-      "courses": ["Math", "History", "Art", "PE"]
-    },
-    {
-      "id": 5,
-      "name": "Eva",
-      "courses": ["Science", "Math", "Music"]
-    },
-    {
-      "id": 6,
-      "name": "Frank",
-      "courses": ["English", "Art"]
-    },
-    {
-      "id": 7,
-      "name": "Grace",
-      "courses": ["Math", "Science", "English", "Music"]
-    },
-    {
-      "id": 8,
-      "name": "Helen",
-      "courses": ["History", "Art", "PE"]
-    },
-    {
-      "id": 9,
-      "name": "Ivy",
-      "courses": ["Science", "English", "Art"]
-    },
-    {
-      "id": 10,
-      "name": "Jack",
-      "courses": ["Math", "History", "Music"]
-    }
-  ]
-  
-  
-  /**********
+  {
+    id: 1,
+    name: "Alice",
+    courses: ["Math", "Science", "History"],
+  },
+  {
+    id: 2,
+    name: "Bob",
+    courses: ["History", "English", "Math", "Art"],
+  },
+  {
+    id: 3,
+    name: "Charlie",
+    courses: ["Science", "English", "Music"],
+  },
+  {
+    id: 4,
+    name: "David",
+    courses: ["Math", "History", "Art", "PE"],
+  },
+  {
+    id: 5,
+    name: "Eva",
+    courses: ["Science", "Math", "Music"],
+  },
+  {
+    id: 6,
+    name: "Frank",
+    courses: ["English", "Art"],
+  },
+  {
+    id: 7,
+    name: "Grace",
+    courses: ["Math", "Science", "English", "Music"],
+  },
+  {
+    id: 8,
+    name: "Helen",
+    courses: ["History", "Art", "PE"],
+  },
+  {
+    id: 9,
+    name: "Ivy",
+    courses: ["Science", "English", "Art"],
+  },
+  {
+    id: 10,
+    name: "Jack",
+    courses: ["Math", "History", "Music"],
+  },
+];
+
+/**********
   Question 1:
   You have a function getStudentName(student) that:
   - receives a student object
@@ -62,14 +60,19 @@ const students = [
   ===
   ANSWER: Alice
   **********/
-  
-  function getStudentName(student) {
-    // Your code here
-  }
-  // console.log(getStudentName(students[0])) 
-  
-  
-  /**********
+
+function getStudentName(student) {
+    //student = 
+    // {
+    //     "id": 1,
+    //     "name": "Alice",
+    //     "courses": ["Math", "Science", "History"]
+    //   }
+    return student.name
+}
+getStudentName(students[0]);
+
+/**********
     Question 2:
     You have a function that:
     - recieves a student object
@@ -78,14 +81,15 @@ const students = [
       ===
       ANSWER: Music
     **********/
-  
-  function getCourse(student, courseIndex) {
-    // Your code here
-  }
-  // console.log(getCourse(students[4], 2)); 
-  
-  
-  /**********
+
+function getCourse(student, courseIndex) {
+  console.log(student);
+  console.log(courseIndex);
+  console.log(student.courses[courseIndex])
+}
+console.log(getCourse(students[4], 2));
+
+/**********
     Question 3:
     addCourseToStudent(student, course):
     - recieves a student object
@@ -100,15 +104,15 @@ const students = [
         courses: [ 'History', 'Art', 'PE', 'Physics' ]
       }
       **********/
-  
-  function addCourseToStudent(student, course) {
-    // Your code here
-  }
-  
-  // console.log(addCourseToStudent(students[7], "Physics"));
-  
-  
-  /**********
+
+function addCourseToStudent(student, course) {
+    student.courses.push(course);
+    return student;
+}
+
+console.log(addCourseToStudent(students[7], "Physics"));
+
+/**********
     Question 4:
     countCourses(student):
     - recieves a student object
@@ -116,13 +120,12 @@ const students = [
       ===
       ANSWER: 4
     **********/
-  function countCourses(student) {
-    // Your code here
-  }
-  // console.log(countCourses(students[1]));
-  
-  
-  /**********
+function countCourses(student) {
+  return student.courses.length;
+}
+console.log(countCourses(students[1]));
+
+/**********
     Question 5: 🌶️🌶️
     listAllCourses(students):
     - recieves an array of student objects
@@ -136,13 +139,20 @@ const students = [
         'PE'
       ]
     **********/
-  function listAllCourses(students) {
-    // Your code here
-  }
-  // console.log(listAllCourses(students));
+function listAllCourses(students) {
+    let unique=[];
+    students.forEach( (student) => {
+        student.courses.forEach( (course) => {
+            if(!unique.includes(course)){
+                unique.push(course)
+            }
+        })
+    });
   
-  
-  /**********
+}
+console.log(listAllCourses(students));
+
+/**********
     Question 6:
     removeCourseFromStudent(course, student):
     - recieves a student object
@@ -153,15 +163,14 @@ const students = [
     ANSWER:
     { id: 7, name: 'Grace', courses: [ 'Math', 'English', 'Music' ] }
     **********/
-  
-  function removeCourseFromStudent(student, course) {
-    // Your code here
-  
-  }
-  // console.log(removeCourseFromStudent(students[6],"Science"));
-  
-  
-  /**********
+
+function removeCourseFromStudent(student, course) {
+  student.courses = student.courses.filter((x) => x!=course);
+  return student;
+}
+console.log(removeCourseFromStudent(students[6],"Science"));
+
+/**********
     Question 7:
     findStudentById(studentId, students):
     - recieves a student id (number)
@@ -170,16 +179,14 @@ const students = [
     ===
     ANSWER: { id: 10, name: 'Jack', courses: [ 'Math', 'History', 'Music' ] }
     **********/
-  
-  function findStudentById(studentId, students) {
-    // Your code here
-  
-  }
-  
-  // console.log(findStudentById(10,students));
-  
-  
-  /**********
+
+function findStudentById(studentId, students) {
+  return students.filter( (x) => x.id == studentId)
+}
+
+console.log(findStudentById(10,students));
+
+/**********
     Question 8: 🌶️🌶️🌶️
     getStudentsByCourse(course, students):
     - recieves a course name (string)
@@ -202,9 +209,9 @@ const students = [
     { id: 10, name: 'Jack', courses: [ 'Math', 'History', 'Music' ] }
   ]
     **********/
-  
-  function getStudentsByCourse(course, students) {
-    // Your code here
-  }
-  
-  // console.log(getStudentsByCourse("Music",students));
+
+function getStudentsByCourse(course, students) {
+  // Your code here
+}
+
+// console.log(getStudentsByCourse("Music",students));
