@@ -151,6 +151,6 @@ const res = students.find((student, index)=>{
 console.log(res)
 
 // console.log(res)
-// const res2 = res.grades.map((grade)=>{
-//   return 100
-// })
+const res2 = res.grades.map((grade)=>{
+  return 100
+})
