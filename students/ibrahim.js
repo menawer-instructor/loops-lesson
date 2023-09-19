@@ -1,1 +1,1 @@
-let name = "ibrahim",12
+let name = "ibrahim"
