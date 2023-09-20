@@ -32,10 +32,16 @@ async function runShop() {
   Category: ${drink.category}
   `)
   );
-  const nameOfOrder = await takeInput("Which drink do you want?");
-  let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
-  console.log(orderedItem);
-
+  const orders = [];
+  while(true){
+      const nameOfOrder = await takeInput(`Which drink do you want? write "done" when you finish?`);
+      if(nameOfOrder == "done"){
+        break;
+      }
+      let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
+      orders.push(orderedItem);
+  }
+  console.log(orders);
 
 }
 
