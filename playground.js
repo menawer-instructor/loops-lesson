@@ -1,6 +1,19 @@
-let arr = [1,2,3];
-arr.push(5);
-console.log(arr);
-let newArr = arr.filter((x) => x==1);
-console.log(arr);
-console.log(newArr);
+//Ahmed
+/**********
+  Question 5: 🌶️🌶️
+  listAllCourses(students):
+  - recieves an array of student objects
+  - returns an array of all unique course names across all students
+	===
+	ANSWER: 
+	[
+	  'Math',    'Science',
+	  'History', 'English',
+	  'Art',     'Music',
+	  'PE'
+	]
+  **********/
+function listAllCourses(students) {
+  // Your code here
+}
+// console.log(listAllCourses(students));
