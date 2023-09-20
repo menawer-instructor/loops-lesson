@@ -21,16 +21,26 @@ const drinks = [
     cost: 1.75,
     category: "Cold",
   },
+  {
+    name: "Hot Chocolate",
+    cost: "1.500 kd",
+    category: "Coco powder on top",
+  },
+  {
+    name: "Green Tea",
+    cost: 0.75,
+    category: "Single tea bag",
+  },
 ];
 
 async function runShop() {
   console.log("Welcome to our Shop, siiiiiiiiir!");
   drinks.forEach((drink) =>
     console.log(`
-  Name: ${drink.name}
-  Cost: ${drink.cost}
-  Category: ${drink.category}
-  `)
+    Name: ${drink.name}
+    Cost: ${drink.cost}
+    Category: ${drink.category}
+    `)
   );
   const nameOfOrder = await takeInput("Which drink do you want?");
   let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
