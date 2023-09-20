@@ -27,8 +27,8 @@ const drinks = [
     category: "Hot",
   },
   {
-    name: "Espresso",
-    cost: 1,
+    name: "Macchiato",
+    cost: 2.75,
     category: "Hot",
   },
 ];
