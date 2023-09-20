@@ -13,3 +13,17 @@ console.log(`my age is ${age}`)
 }// end yourage 
 
 Yourage(1930)
+
+
+// is it right ?
+function getCourse(student, courseIndex) {
+    // Your code here
+  
+    students.forEach(
+      (course) => {
+        if (course.courses == "Music") console.log(course.indexof("Music"));
+      } // method course
+    ); // end foreach
+  } // end getCourse
+  console.log(getCourse(students[4], 2));
+  
