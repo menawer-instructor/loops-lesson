@@ -43,16 +43,17 @@ async function runShop() {
   `)
   );
   const orders = [];
-  while(true){
-      const nameOfOrder = await takeInput(`Which drink do you want? write "done" when you finish?`);
-      if(nameOfOrder == "done"){
-        break;
-      }
-      let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
-      orders.push(orderedItem);
+  while (true) {
+    const nameOfOrder = await takeInput(
+      `Which drink do you want? write "done" when you finish? `
+    );
+    if (nameOfOrder == "done") {
+      break;
+    }
+    let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
+    orders.push(orderedItem);
   }
   console.log(orders);
-
 }
 
 runShop();
