@@ -46,26 +46,26 @@ async function runShop() {
   //   let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
   //   console.log(orderedItem);
 
-  //   let orders = [];
-  //   const nameOfOrder = await takeInput("Which drink do you want?");
-  //   while (nameOfOrder != "done") {
-  //     const nameOfOrder = await takeInput("Which drink do you want?");
-  //     let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
-  //     orders.push(orders);
-  //   }
-  //   console.log(orders);
-
   let orders = [];
-  while (true) {
-    const nameOfOrder = await takeInput("Which drink do you want?");
+  let nameOfOrder = "";
+  while (nameOfOrder != "done") {
+    nameOfOrder = await takeInput("Which drink do you want?");
     let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
-    orders.push(orderedItem);
-    const done = await takeInput("write done if you finish");
-    if (done == "done") {
-      break;
-    }
+    if (orderedItem) orders.push(orderedItem);
   }
   console.log(orders);
+
+  //   let orders = [];
+  //   while (true) {
+  //     const nameOfOrder = await takeInput("Which drink do you want?");
+  //     let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
+  //     orders.push(orderedItem);
+  //     const done = await takeInput("write done if you finish");
+  //     if (done == "done") {
+  //       break;
+  //     }
+  //   }
+  //   console.log(orders);
 }
 
 runShop();
