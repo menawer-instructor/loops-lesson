@@ -22,13 +22,13 @@ const drinks = [
     category: "Cold",
   },
   {
-    name: "Cappuccino",
-    cost: 2.0,
-    category: "Hot",
+    name: "Crush",
+    cost: 0.99,
+    category: "Cold",
   },
   {
-    name: "Macchiato",
-    cost: 2.75,
+    name: "Sahlab",
+    cost: 1.25,
     category: "Hot",
   },
 ];
@@ -37,12 +37,12 @@ async function runShop() {
   console.log("Welcome to our Shop, siiiiiiiiir!");
   drinks.forEach((drink) =>
     console.log(`
-  Name: ${drink.name}
-  Cost: ${drink.cost}
-  Category: ${drink.category}
-  `)
+    Name: ${drink.name}
+    Cost: ${drink.cost}
+    Category: ${drink.category}
+    `)
   );
-  const nameOfOrder = await takeInput("Which drink do you want? ");
+  const nameOfOrder = await takeInput("Which drink do you want?");
   let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
   console.log(orderedItem);
 }
