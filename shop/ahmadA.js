@@ -45,15 +45,32 @@ async function runShop() {
   const orders = [];
   while (true) {
     const nameOfOrder = await takeInput(
-      "Which drink do you want?, type Done when finish "
+      "Which drink do you want?, type done when finish: "
     );
-    let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
-    if (nameOfOrder == "Done") {
+    let orderedItem = drinks.find(
+      (drink) => drink.name.toLowerCase() == nameOfOrder.toLowerCase()
+    );
+    if (nameOfOrder == "done") {
       break;
     }
+    const quantityOfOrder = await takeInput("Enter quantity: ");
+    orderedItem.quantity = quantityOfOrder;
     orders.push(orderedItem);
   }
-  console.log(orders);
+  let total = 0;
+  orders.forEach((x) => {
+    total += x.cost * x.quantity;
+  });
+  orders.forEach((x) => {
+    console.log(`
+    Name: ${x.name} // Item Price: ${x.cost} KD/pc  // Quanity: ${
+      x.quantity
+    } pcss // Total Item Price: ${x.cost * x.quantity} KD `);
+  });
+  console.log(`               TOTAL = ${total} KD`);
+  // for (i = 0; i < orders.length; i++) {
+  //   console.log(`Item: ${orders.name[i]} -- Quantity: ${orders.quantity[i]}`);
+  // }
 }
 
 runShop();
