@@ -48,12 +48,21 @@ async function runShop() {
 
   let orders = [];
   let nameOfOrder = "";
-  while (nameOfOrder != "done") {
+  while (nameOfOrder.toLowerCase() != "done") {
     nameOfOrder = await takeInput("Which drink do you want?");
-    let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
+    let orderedItem = drinks.find(
+      (drink) => drink.name.toLowerCase() == nameOfOrder.toLowerCase()
+    );
     if (orderedItem) orders.push(orderedItem);
   }
+
+  let sum = 0;
+  orders.forEach((order) => {
+    sum += order.cost;
+  });
+
   console.log(orders);
+  console.log(`your total is ${sum}`);
 
   //   let orders = [];
   //   while (true) {

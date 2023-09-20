@@ -55,3 +55,30 @@ async function runShop() {
 }
 
 runShop();
+
+const students = [
+  { name: "ali", age: 50, grades: [100, 200, 300, 400] },
+  { name: "ali1", age: 50, grades: [10, 20, 30, 40] },
+  { name: "ali2", age: 50, grades: [11, 32, 24, 44] },
+  { name: "ali3", age: 50, grades: [100, 200, 3020, 400] },
+  { name: "ali4", age: 50, grades: [100, 200, 300234, 442300] },
+  { name: "ali5", age: 50, grades: [100, 200, 300, 400423] },
+];
+
+const res2 = students.some((student) => {
+  const res = student.grades.some((grade) => {
+    if (grade == 442300) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+
+  if (res) {
+    return true;
+  } else {
+    return false;
+  }
+});
+
+console.log(res2);
