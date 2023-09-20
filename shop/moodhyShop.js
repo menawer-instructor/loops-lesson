@@ -22,8 +22,8 @@ const readline = require("readline").createInterface({
       category: "Cold",
     },
     {
-        name: "Iced-White Mocha"
-        cost: 2.5
+        name: "Iced-White Mocha",
+        cost: 2.5,
         category: "Cold"
     }
   ];
