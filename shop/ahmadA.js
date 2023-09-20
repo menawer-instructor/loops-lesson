@@ -22,14 +22,14 @@ const drinks = [
     category: "Cold",
   },
   {
-    name: "Cappuccino",
-    cost: 2.0,
+    name: "Tea",
+    cost: 1,
     category: "Hot",
   },
   {
-    name: "Macchiato",
-    cost: 2.75,
-    category: "Hot",
+    name: "Water",
+    cost: 0.5,
+    category: "Cold",
   },
 ];
 
@@ -45,12 +45,12 @@ async function runShop() {
   const orders = [];
   while (true) {
     const nameOfOrder = await takeInput(
-      `Which drink do you want? write "done" when you finish? `
+      "Which drink do you want?, type Done when finish "
     );
-    if (nameOfOrder == "done") {
+    let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
+    if (nameOfOrder == "Done") {
       break;
     }
-    let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
     orders.push(orderedItem);
   }
   console.log(orders);
