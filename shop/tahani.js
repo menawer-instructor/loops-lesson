@@ -1,3 +1,5 @@
+// tahani drinks
+
 //Code By Menawer, Takes input from user
 const readline = require("readline").createInterface({
   input: process.stdin,
@@ -10,6 +12,7 @@ async function takeInput(question) {
   });
 }
 //Dont look at above code yet.
+
 const drinks = [
   {
     name: "Latte",
@@ -21,41 +24,46 @@ const drinks = [
     cost: 1.75,
     category: "Cold",
   },
+
   {
-    name: "Cappuccino",
-    cost: 2.0,
+    name: "Arabic coffee",
+    cost: 1.5,
     category: "Hot",
   },
-  {
-    name: "Macchiato",
-    cost: 2.75,
-    category: "Hot",
-  },
+    {
+      name: "mojito(strawburry)",
+      cost: 2.75,
+      category: "Cold",
+    },
+    {
+      name: "mojito(lemon)",
+      cost: 1.75,
+      category: "Cold",
+    },
+    {
+      name: "mojito(blueburry)",
+      cost: 2.0,
+      category: "Cold",
+    }
+  
 ];
 
 async function runShop() {
   console.log("Welcome to our Shop, siiiiiiiiir!");
   drinks.forEach((drink) =>
     console.log(`
-  Name: ${drink.name}
-  Cost: ${drink.cost}
-  Category: ${drink.category}
-  `)
+    Name: ${drink.name}
+    Cost: ${drink.cost}
+    Category: ${drink.category}
+    `)
   );
-  const orders = [];
-  while (true) {
-    const nameOfOrder = await takeInput(
-      `Which drink do you want? write "done" when you finish? `
-    );
-    if (nameOfOrder == "done") {
-      break;
-    }
-    let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
-    orders.push(orderedItem);
-  }
-  console.log(orders);
+  const nameOfOrder = await takeInput("Which drink do you want?");
+  let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
+  console.log(orderedItem);
 }
 
 runShop();
+
+
 
 
