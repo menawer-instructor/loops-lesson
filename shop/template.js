@@ -35,8 +35,6 @@ async function runShop() {
   const nameOfOrder = await takeInput("Which drink do you want?");
   let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
   console.log(orderedItem);
-
-
 }
 
 runShop();
