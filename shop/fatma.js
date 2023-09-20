@@ -1,4 +1,6 @@
-//Code By Menawer, Takes input from user
+
+
+  //Code By Menawer, Takes input from user
 const readline = require("readline").createInterface({
     input: process.stdin,
     output: process.stdout,
@@ -10,9 +12,44 @@ const readline = require("readline").createInterface({
     });
   }
   //Dont look at above code yet.
+  const drinks = [
+    {
+      name: "Latte",
+      cost: 2.25,
+      category: "Hot",
+    },
+    {
+      name: "Iced Americano",
+      cost: 1.75,
+      category: "Cold",
+    },
+    {
+
+        name : "spanish latte",
+        cost:2.750,
+        category: "hot",
+    },
+    {
+        name: "hot americonp",
+        cost: 2.750,
+        category: "hot",
+    }
+  ];
   
   async function runShop() {
-    const cookies = await takeInput("How Many Cookies? ");
+    console.log("Welcome to our Shop, siiiiiiiiir!");
+    drinks.forEach((drink) =>
+      console.log(`
+    Name: ${drink.name}
+    Cost: ${drink.cost}
+    Category: ${drink.category}
+    `)
+    );
+    const nameOfOrder = await takeInput("Which drink do you want?");
+    let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
+    console.log(orderedItem);
+  
+  
   }
   
   runShop();
