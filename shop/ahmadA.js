@@ -22,14 +22,14 @@ const drinks = [
     category: "Cold",
   },
   {
-    name: "Cappuccino",
-    cost: 2.0,
+    name: "Tea",
+    cost: 1,
     category: "Hot",
   },
   {
-    name: "Macchiato",
-    cost: 2.75,
-    category: "Hot",
+    name: "Water",
+    cost: 0.5,
+    category: "Cold",
   },
 ];
 
@@ -37,32 +37,22 @@ async function runShop() {
   console.log("Welcome to our Shop, siiiiiiiiir!");
   drinks.forEach((drink) =>
     console.log(`
-    Name: ${drink.name}
-    Cost: ${drink.cost}
-    Category: ${drink.category}
-    `)
+  Name: ${drink.name}
+  Cost: ${drink.cost}
+  Category: ${drink.category}
+  `)
   );
   const orders = [];
   while (true) {
     const nameOfOrder = await takeInput(
-      `Which drink do you want? write "done" when you finish? `
+      "Which drink do you want?, type Done when finish "
     );
-    if (nameOfOrder.toLowerCase() == "done".toLowerCase()) {
+    let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
+    if (nameOfOrder == "Done") {
       break;
     }
-    let orderedItem = drinks.find(
-      (drink) => drink.name.toLowerCase() === nameOfOrder.toLowerCase()
-    );
     orders.push(orderedItem);
   }
-  function totalOrder(orders) {
-    let total = 0;
-    orders.forEach((order) => {
-      total = total + order.cost;
-    });
-    return total;
-  }
-  console.log(`Your total amount to pay is : ${totalOrder(orders)}`);
   console.log(orders);
 }
 
