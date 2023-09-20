@@ -72,9 +72,18 @@ const readline = require("readline").createInterface({
     console.log(`Your total is ${total} kd`);
     console.log("Thank you!")
 
-    const newLowerDrinks= drinks.map((x) => x.name.toLowerCase());
+    // new array using .map lowercase
+    const newLowerDrinks= drinks.map((x) => {
+      return{
+        name: x.name.toLowerCase(),
+        cost: x.cost,
+        category: x.category
+      };//return
+
+    });
 
     console.log(newLowerDrinks);
+    
 
 
     
