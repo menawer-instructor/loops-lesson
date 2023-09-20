@@ -45,7 +45,7 @@ async function runShop() {
   const orders = [];
   while (true) {
     const nameOfOrder = await takeInput(
-      `Which drink do you want? write "done" when you finish?`
+      `Which drink do you want? write "done" when you finish? `
     );
     if (nameOfOrder == "done") {
       break;
