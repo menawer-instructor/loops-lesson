@@ -46,26 +46,35 @@ async function runShop() {
   //   let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
   //   console.log(orderedItem);
 
+  let orders = [];
+  let nameOfOrder = "";
+  while (nameOfOrder.toLowerCase() != "done") {
+    nameOfOrder = await takeInput("Which drink do you want?");
+    let orderedItem = drinks.find(
+      (drink) => drink.name.toLowerCase() == nameOfOrder.toLowerCase()
+    );
+    if (orderedItem) orders.push(orderedItem);
+  }
+
+  let sum = 0;
+  orders.forEach((order) => {
+    sum += order.cost;
+  });
+
+  console.log(orders);
+  console.log(`your total is ${sum}`);
+
   //   let orders = [];
-  //   const nameOfOrder = await takeInput("Which drink do you want?");
-  //   while (nameOfOrder != "done") {
+  //   while (true) {
   //     const nameOfOrder = await takeInput("Which drink do you want?");
   //     let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
-  //     orders.push(orders);
+  //     orders.push(orderedItem);
+  //     const done = await takeInput("write done if you finish");
+  //     if (done == "done") {
+  //       break;
+  //     }
   //   }
   //   console.log(orders);
-
-  let orders = [];
-  while (true) {
-    const nameOfOrder = await takeInput("Which drink do you want?");
-    let orderedItem = drinks.find((drink) => drink.name == nameOfOrder);
-    orders.push(orderedItem);
-    const done = await takeInput("write done if you finish");
-    if (done == "done") {
-      break;
-    }
-  }
-  console.log(orders);
 }
 
 runShop();
