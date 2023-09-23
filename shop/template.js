@@ -47,7 +47,7 @@ async function runShop() {
     const nameOfOrder = await takeInput(
       `Which drink do you want? write "done" when you finish?`
     );
-    if (nameOfOrder == "done") {
+    if (nameOfOrder.toLowerCase() == "done") {
       break;
     }
     const quantity = await takeInput(`How many?`);
@@ -59,13 +59,11 @@ async function runShop() {
     orders.push(orderedItem);
   }
 
-  let total=0;
+  let total = 0;
   orders.forEach((order) => {
-    total += order.cost*order.quantity;
+    total += order.cost * order.quantity;
   });
   console.log(`Please pay: ${total} KD`);
 }
 
 runShop();
-
-
