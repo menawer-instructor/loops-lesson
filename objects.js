@@ -4,7 +4,7 @@
 ********************************/
 
 let person = {
-  name: "Rawan",
+  name: "Omar",
   age: 18,
   city: "Kuwait",
 };
